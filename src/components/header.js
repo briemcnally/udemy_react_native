@@ -4,11 +4,11 @@ import { Text, View } from 'react-native';
 //wrap text tag in view
 
 //make component
-const Header = () => {
+const Header = (props) => {
   const { textStyle, viewStyle } = styles;
   return(
     <View style={viewStyle}>
-      <Text style={textStyle}>Albums!</Text>
+      <Text style={textStyle}>{props.headerText}</Text>
     </View>
   );
   //style-{textStyle} is a props
@@ -24,7 +24,10 @@ const styles = {
     paddingTop: 15,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2},
-    shadowOpacity: 0.2
+    shadowOpacity: 0.2,
+    //between 1 and 0
+    elevation: 2,
+    position: 'relative'
   },
   textStyle: {
     fontSize: 20
