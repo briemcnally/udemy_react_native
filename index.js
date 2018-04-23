@@ -8,7 +8,7 @@ import AlbumList from './src/components/AlbumList';
 //Component nesting
 const App = () => {
   return(
-    <View>
+    <View style={{ flex: 1 }}>
       <Header headerText={'Albums'}/>
       <AlbumList />
     </View>
